@@ -225,4 +225,3 @@ function draw() {
   });
 }
 
-draw();
