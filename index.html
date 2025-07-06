@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cap Sketcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <fieldset class="title-section">
+    <h1>Cap Sketcher</h1>
+    <label for="title" class="job-label">Job Name</label>
+    <input type="text" id="title" placeholder="Required">
+  </fieldset>
+
+  <fieldset>
+    <h2>Cap Dimensions</h2>
+    <p><em>Measure all four sides of the chimney cap and pick the largest one for each side. Enter in the exact dimensions — we will add .25" to the final size to ensure your new cap fits.</em></p>
+    <label>Length (in): <input type="number" id="length" value="32"></label>
+    <label>Width (in): <input type="number" id="width" value="32"></label>
+    <label>Turn-down (in): <input type="number" id="turndown" value="2.5"></label>
+    <label class="inline-check">
+      <input type="checkbox" id="dripEdge" checked>
+      </label>
+  <span>Add Drip-edge (45° x 1/2")</span>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <h2>Hole Settings</h2>
+    <label>Number of Holes:
+      <select id="numHoles">
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+      </select>
+    </label>
+  </fieldset>
+
+  <fieldset class="hole-inputs" id="hole1Section">
+    <h2>Hole 1</h2>
+    <label>Diameter (in): <input type="number" id="hole1Diameter" value="13"></label>
+    <label>Collar Height (in): <input type="number" id="hole1Collar" value="3"></label>
+    <label class="inline-check">
+      <input type="checkbox" id="hole1Centered" checked> Centered?
+    </label>
+    <div id="hole1OffsetFields" style="display:none;">
+      <label>X Direction:
+        <select id="hole1XDir">
+          <option value="From Left">From Left</option>
+          <option value="From Right">From Right</option>
+        </select>
+      </label>
+      <label>X Offset (in): <input type="number" id="hole1XOffset" value="0"></label>
+      <label>Y Direction:
+        <select id="hole1YDir">
+          <option value="From Front">From Front</option>
+          <option value="From Back">From Back</option>
+        </select>
+      </label>
+      <label>Y Offset (in): <input type="number" id="hole1YOffset" value="0"></label>
+    </div>
+  </fieldset>
+
+  <fieldset class="hole-inputs" id="hole2Section" style="display:none;">
+    <h2>Hole 2</h2>
+    <label>Diameter (in): <input type="number" id="hole2Diameter" value="13"></label>
+    <label>Collar Height (in): <input type="number" id="hole2Collar" value="3"></label>
+    <label class="inline-check">
+      <input type="checkbox" id="hole2Centered" checked> Centered?
+    </label>
+    <div id="hole2OffsetFields" style="display:none;">
+      <label>X Direction:
+        <select id="hole2XDir">
+          <option value="From Left">From Left</option>
+          <option value="From Right">From Right</option>
+        </select>
+      </label>
+      <label>X Offset (in): <input type="number" id="hole2XOffset" value="0"></label>
+      <label>Y Direction:
+        <select id="hole2YDir">
+          <option value="From Front">From Front</option>
+          <option value="From Back">From Back</option>
+        </select>
+      </label>
+      <label>Y Offset (in): <input type="number" id="hole2YOffset" value="0"></label>
+    </div>
+  </fieldset>
+
+  <div class="button-row">
+    <button id="createSketch">✏️ Create Sketch</button>
+    <button id="download" disabled>⬇️ Download</button>
+  </div>
+
+  <div class="canvas-container">
+    <canvas id="sketchCanvas"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

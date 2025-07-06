@@ -1,0 +1,124 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f8f9fb;
+  color: #333;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.title-section {
+  background: #00639e;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.job-label {
+  display: block;
+  text-align: left;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+  color: #fff;
+}
+
+fieldset {
+  background: #002940;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin: 15px 0;
+}
+
+fieldset h2 {
+  text-align: center;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  font-size: 1.5em;
+  color: #fff;
+  line-height: 1.2;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin: 10px 0 5px;
+}
+
+.inline-check {
+  display: inline-flex;      /* back to inline-flex */
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: left;
+  gap: 6px;
+  font-weight: 500;
+  margin: 1px 0;
+}
+
+
+em {
+  color: #fff;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #335466;
+  border-radius: 6px;
+  color: #fff;
+  background: #335466;
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.button-row button {
+  flex: 1;
+  text-align: center;
+  background: #00639e;
+  color: #fff;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.button-row button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.button-row button:hover:enabled {
+  background: #004F7A;
+}
+
+.canvas-container {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+#sketchCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
